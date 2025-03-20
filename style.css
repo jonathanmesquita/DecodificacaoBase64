@@ -1,0 +1,42 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f1eb; /* Cor de fundo terracota suave */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do título */
+h1 {
+    color: #ff7f50; /* Tom terracota */
+    margin-top: 50px;
+}
+
+/* Estilo do parágrafo */
+p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #ff7f50; /* Cor do botão em tom terracota */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e67347; /* Hover efeito em tom mais escuro */
+}
+
+/* Estilo da área de saída (onde o resultado será exibido) */
+.output {
+    background-color: #ffcc99; /* Fundo d

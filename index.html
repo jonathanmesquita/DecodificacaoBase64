@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificação Base64</title>
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1eb; /* Cor de fundo terracota suave */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo do título */
+        h1 {
+            color: #ff7f50; /* Tom terracota */
+            margin-top: 50px;
+        }
+
+        /* Estilo do campo de entrada */
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 500px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilo do botão */
+        button {
+            background-color: #ff7f50; /* Cor do botão em tom terracota */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e67347; /* Hover efeito em tom mais escuro */
+        }
+
+        /* Estilo da área de saída (onde o resultado será exibido) */
+        .output {
+            background-color: #ffcc99; /* Fundo de output em cor terracota */
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+            display: inline-block;
+            width: 80%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Decodificação Base64</h1>
+    <p>Preencha o campo abaixo com uma string Base64:</p>
+    
+    <!-- Campo de entrada para o código Base64 -->
+    <input type="text" id="encoded" value="dXN1YXJpbzpzZW5oYTEyMw==" placeholder="Digite a string Base64 aqui">
+
+    <!-- Botão para realizar a decodificação -->
+    <button onclick="decodeBase64()">Decodificar</button>
+
+    <!-- Área onde o resultado será exibido -->
+    <div class="output" id="output"></div>
+
+    <script>
+        function decodeBase64() {
+            // Obtendo o valor inserido no campo de entrada
+            const encoded = document.getElementById("encoded").value;
+            
+            // Verificando se o valor não está vazio
+            if (encoded) {
+                // Decodificando a string Base64
+                const decoded = atob(encoded);
+                
+                // Exibindo o resultado na página
+                document.getElementById("output").textContent = "Resultado: " + decoded;
+            } else {
+                // Caso o campo esteja vazio, mostrando uma mensagem de erro
+                document.getElementById("output").textContent = "Por favor, insira uma string Base64 válida!";
+            }
+        }
+    </script>
+</body>
+</html>
